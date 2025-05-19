@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PlantAI - Your Intelligent Plantation Guide</title>
+    <link rel="stylesheet" href="css/aipage.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script src="js/aipage.js"></script>
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar Navigation -->
+        <div class="sidebar">
+            <div class="logo">
+                <i class="fas fa-seedling"></i>
+                <span>GrowSmart</span>
+            </div>
+            <div class="nav-links">
+                <a href="index.html" class="active"><i class="fas fa-home"></i> Home</a>
+                <a href="book-team.html"><i class="fas fa-history"></i> INSPECTION</a>
+                <a href="store.html"><i class="fas fa-book"></i> Fertilizers</a>
+                
+            </div>
+            <div class="settings">
+                <div class="settings-header">Settings</div>
+                <div class="settings-option">
+                    <span>Dark Mode</span>
+                    <label class="switch">
+                        <input type="checkbox" id="darkModeToggle">
+                        <span class="slider round"></span>
+                    </label>
+                </div>
+                <div class="settings-option">
+                    <span>Notifications</span>
+                    <label class="switch">
+                        <input type="checkbox" checked>
+                        <span class="slider round"></span>
+                    </label>
+                </div>
+                <div class="settings-option">
+                    <span>Plant Care Reminders</span>
+                    <label class="switch">
+                        <input type="checkbox" checked>
+                        <span class="slider round"></span>
+                    </label>
+                </div>
+                <div class="settings-option">
+                    <span>GPS Location</span>
+                    <label class="switch">
+                        <input type="checkbox">
+                        <span class="slider round"></span>
+                    </label>
+                </div>
+                <div class="settings-option">
+                    <span>Language</span>
+                    <select class="language-select">
+                        <option>English</option>
+                        <option>Spanish</option>
+                        <option>French</option>
+                        <option>German</option>
+                    </select>
+                </div>
+            </div>
+            <div class="user-profile">
+                <div class="avatar">
+                    <img src="image/99.png" alt="User Avatar">
+                </div>
+                <div class="user-info">
+                    <div class="username">Garden Enthusiast</div>
+                    <div class="status">Premium Plan</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <div class="top-bar">
+                <div class="menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+                <div class="search-container">
+                    <div class="search-box">
+                        <i class="fas fa-search"></i>
+                        <input type="text" placeholder="Search for plants, tips, or ask questions...">
+                    </div>
+                </div>
+                <div class="top-icons">
+                    <i class="fas fa-bell"></i>
+                    <i class="fas fa-cog"></i>
+                </div>
+            </div>
+
+            <div class="welcome-section">
+                <h1>Your Personal AI Plantation Guide</h1>
+                <p>Let our advanced AI help you create and maintain the perfect garden with personalized recommendations tailored to your environment, plant types, and gardening goals.</p>
+            </div>
+
+            <div class="chat-container">
+                <div class="chat-header">
+                    <h2>Ask PlantAI</h2>
+                </div>
+                <div class="chat-messages">
+                    <div class="message system">
+                        <div class="message-content">
+                            <p>Hello! I'm your PlantAI assistant. How can I help with your gardening needs today?</p>
+                        </div>
+                    </div>
+                    <div class="message user">
+                        <div class="message-content">
+                            <p>I want to start growing tomatoes. What do I need to know?</p>
+                        </div>
+                    </div>
+                    <div class="message system">
+                        <div class="message-content">
+                            <p>Great choice! Tomatoes are rewarding plants to grow. Here are some key factors to consider:</p>
+                            <ul>
+                                <li>Choose a sunny spot with 6-8 hours of direct sunlight</li>
+                                <li>Use well-draining soil rich in organic matter</li>
+                                <li>Plant after the last frost date in your region</li>
+                                <li>Water consistently at the base of the plant</li>
+                                <li>Consider staking or caging for support</li>
+                            </ul>
+                            <p>Would you like more specific guidance based on your location and garden setup?</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="chat-input">
+                    <input type="text" placeholder="Ask about any plant or gardening technique...">
+                    <button class="btn">
+                        <svg height="24" width="24" fill="#FFFFFF" viewBox="0 0 24 24" data-name="Layer 1" id="Layer_1" class="sparkle">
+                            <path d="M10,21.236,6.755,14.745.264,11.5,6.755,8.255,10,1.764l3.245,6.491L19.736,11.5l-6.491,3.245ZM18,21l1.5,3L21,21l3-1.5L21,18l-1.5-3L18,18l-3,1.5ZM19.333,4.667,20.5,7l1.167-2.333L24,3.5,21.667,2.333,20.5,0,19.333,2.333,17,3.5Z"></path>
+                        </svg>
+                        <span class="text">Generate</span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="features-section">
+                <h2>What can PlantAI do for you?</h2>
+                <div class="feature-cards">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-cloud-sun"></i>
+                        </div>
+                        <h3>Climate Analysis</h3>
+                        <p>Get personalized planting schedules based on your local climate and weather patterns.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-bug"></i>
+                        </div>
+                        <h3>Pest Identification</h3>
+                        <p>Upload photos of plant issues to get instant identification and treatment recommendations.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-tint"></i>
+                        </div>
+                        <h3>Watering Schedule</h3>
+                        <p>Receive customized watering reminders based on your plants' needs and local conditions.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-seedling"></i>
+                        </div>
+                        <h3>Growth Tracking</h3>
+                        <p>Monitor your plants' progress and get timely care recommendations throughout their lifecycle.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer">
+                <div class="footer-links">
+                    <a href="aboutpage.html">About</a>
+                    
+                </div>
+                <div class="copyright">
+                    © 2025 GrowSmart. All rights reserved.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Toggle sidebar on mobile
+        document.querySelector('.menu-toggle').addEventListener('click', function() {
+            document.querySelector('.sidebar').classList.toggle('active');
+        });
+
+        // Dark mode toggle
+        document.getElementById('darkModeToggle').addEventListener('change', function() {
+            document.body.classList.toggle('dark-mode');
+        });
+    </script>
+</body>
+</html>

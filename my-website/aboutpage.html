@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Company Name</title>
+    <link rel="stylesheet" href="css/aboutpage.css">
+    <script src="js/aboutp.js"></script>
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS variables -->
+    <style>
+        :root {
+            --primary-color: #f49506f7;
+            --primary-color-dark: #393736;
+            --secondary-color: #3e3f3f;
+            --background-light: #f8f9fa;
+            --background-dark: #1a1a1a;
+            --card-light: #ffffff;
+            --card-dark: #2a2a2a;
+            --text-light: #333333;
+            --text-dark: #eeeeee;
+            --border-light: #e1e1e1;
+            --border-dark: #444444;
+            --shadow-light: 0 5px 15px rgba(0, 0, 0, 0.05);
+            --shadow-dark: 0 5px 15px rgba(0, 0, 0, 0.2);
+            --transition-speed: 0.3s ease;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-light);
+            background-color: var(--background-light);
+            transition: all var(--transition-speed);
+            margin: 0;
+            padding: 0;
+        }
+        
+        body.dark-mode {
+            color: var(--text-dark);
+            background-color: var(--background-dark);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        /* Toggle Switch for Dark Mode */
+        .theme-switch {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 100;
+        }
+        
+        .theme-switch label {
+            cursor: pointer;
+            background: #555555;
+            border-radius: 20px;
+            width: 50px;
+            height: 25px;
+            display: inline-block;
+            position: relative;
+            transition: all 0.3s;
+        }
+        
+        .theme-switch label:after {
+            content: "";
+            position: absolute;
+            top: 2px;
+            left: 2px;
+            width: 21px;
+            height: 21px;
+            background: #fff;
+            border-radius: 50%;
+            transition: all 0.3s;
+        }
+        
+        .theme-switch input:checked + label {
+            background: var(--primary-color);
+        }
+        
+        .theme-switch input:checked + label:after {
+            left: calc(100% - 2px);
+            transform: translateX(-100%);
+        }
+        
+        .theme-switch input {
+            opacity: 0;
+            position: absolute;
+        }
+    </style>
+    
+</head>
+<body>
+    <!-- Dark Mode Toggle -->
+    <div class="theme-switch">
+        <input type="checkbox" id="theme-toggle">
+        <label for="theme-toggle"></label>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container">
+        <!-- Hero Section -->
+        <section class="about-hero animate-fade-in">
+            <div class="about-hero-content">
+                <h1>About Our Company</h1>
+                <p>We are a forward-thinking organization dedicated to innovation, excellence, and creating positive impact. Learn about our journey, mission, and the values that drive us forward.</p>
+            </div>
+            <div class="about-hero-image">
+                <img src="image/998.jpeg" alt="Company team collaborating">
+            </div>
+        </section>
+
+        <!-- Mission Section -->
+        <section class="about-section animate-slide-up">
+            <h2>Our Mission</h2>
+            <div class="mission-content">
+                <div class="mission-icon">
+                    <i class="fas fa-rocket"></i>
+                </div>
+                <div class="mission-text">
+                    <p>Our mission is to revolutionize the industry through innovative solutions that address real-world challenges. We strive to create products and services that not only meet but exceed our customers' expectations.</p>
+                    <p>We believe in sustainable growth, ethical practices, and making a positive impact on communities around the world. Our team works tirelessly to push boundaries and explore new possibilities.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Values Section -->
+        <section class="about-section animate-slide-up">
+            <h2>Our Core Values</h2>
+            <div class="values-grid">
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <h3>Innovation</h3>
+                    <p>We constantly seek new ideas and approaches, pushing boundaries to create solutions that make a difference.</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3>Integrity</h3>
+                    <p>We conduct our business with honesty, transparency, and ethical principles that guide every decision we make.</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Collaboration</h3>
+                    <p>We believe in the power of teamwork and cultivate an environment where diverse perspectives thrive.</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-bullseye"></i>
+                    </div>
+                    <h3>Excellence</h3>
+                    <p>We commit to delivering the highest quality in everything we do, always striving to exceed expectations.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stats Section -->
+        <section class="about-section animate-slide-up">
+            <h2>Our Impact</h2>
+            <div class="stats-container">
+                <div class="stat-item animate-zoom-in">
+                    <div class="stat-icon">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <div class="stat-number">35+</div>
+                    <div class="stat-title">Countries Served</div>
+                </div>
+                <div class="stat-item animate-zoom-in">
+                    <div class="stat-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="stat-number">10K+</div>
+                    <div class="stat-title">Happy Clients</div>
+                </div>
+                <div class="stat-item animate-zoom-in">
+                    <div class="stat-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <div class="stat-number">98%</div>
+                    <div class="stat-title">Satisfaction Rate</div>
+                </div>
+                <div class="stat-item animate-zoom-in">
+                    <div class="stat-icon">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <div class="stat-number">25+</div>
+                    <div class="stat-title">Industry Awards</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Timeline Section -->
+        <section class="about-section animate-slide-up">
+            <h2>Our Journey</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content animate-slide-right">
+                        <div class="timeline-date">2010</div>
+                        <h3>Company Founded</h3>
+                        <p>Our company was established with a vision to transform the industry through innovative approaches and solutions.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content animate-slide-left">
+                        <div class="timeline-date">2013</div>
+                        <h3>First Major Client</h3>
+                        <p>Secured our first enterprise client and launched our flagship product that revolutionized the market.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content animate-slide-right">
+                        <div class="timeline-date">2016</div>
+                        <h3>International Expansion</h3>
+                        <p>Expanded operations to Europe and Asia, establishing our global presence in key markets around the world.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content animate-slide-left">
+                        <div class="timeline-date">2019</div>
+                        <h3>Innovation Award</h3>
+                        <p>Recognized for our contributions to the industry with the prestigious Global Innovation Award.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content animate-slide-right">
+                        <div class="timeline-date">2023</div>
+                        <h3>Sustainability Initiative</h3>
+                        <p>Launched our comprehensive sustainability program, committing to carbon neutrality by 2030.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Team Section -->
+        <section class="about-section animate-slide-up">
+            <h2>Meet Our Team</h2>
+            <div class="team-grid">
+                <div class="team-card">
+                    <div class="team-image">
+                        <img src="image/sana.jpg" alt="CEO">
+                    </div>
+                    <h3>Sanaullah</h3>
+                    <div class="team-role">Chief Executive Officer</div>
+                    <div class="team-bio">
+                        Sanaullah brings over 4 years of leadership experience in the industry. His vision and strategic direction have been instrumental in our growth.
+                    </div>
+                    <div class="team-social">
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+                <div class="team-card">
+                    <div class="team-image">
+                        <img src="image/azfar.jpg" alt="CTO">
+                    </div>
+                    <h3>Azfar Laraib</h3>
+                    <div class="team-role">Chief Technology Officer</div>
+                    <div class="team-bio">
+                        Azfar leads our technology initiatives with a focus on innovation and scalable solutions. His technical expertise drives our product development.
+                    </div>
+                    <div class="team-social">
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                        <a href="#"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+                <div class="team-card">
+                    <div class="team-image">
+                        <img src="image/kashif.jpg" alt="COO">
+                    </div>
+                    <h3>Kashif Farooq</h3>
+                    <div class="team-role">Chief Operations Officer</div>
+                    <div class="team-bio">
+                        Kashif oversees our day-to-day operations, ensuring efficient processes and delivery of quality services to our clients worldwide.
+                    </div>
+                    <div class="team-social">
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+                <div class="team-card">
+                    <div class="team-image">
+                        <img src="image/headerfile.jpg" alt="CMO">
+                    </div>
+                    <h3>Haider Ali</h3>
+                    <div class="team-role">Chief Marketing Officer</div>
+                    <div class="team-bio">
+                        Haider drives our brand strategy and marketing initiatives, helping us connect with our audience and share our story effectively.
+                    </div>
+                    <div class="team-social">
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section class="about-section animate-slide-up">
+            <h2>What Our Clients Say</h2>
+            <div class="testimonials-slider">
+                <div class="testimonial-item">
+                    <div class="testimonial-quote">
+                        Working with this company has been transformative for our business. Their innovative solutions and dedicated support have helped us achieve remarkable growth and efficiency.
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">
+                            <img src="image/ali.jpg" alt="Client">
+                        </div>
+                        <div class="testimonial-name">Ali Ishtiaq</div>
+                        <div class="testimonial-position">CEO, TechCorp</div>
+                    </div>
+                </div>
+                <div class="testimonial-item">
+                    <div class="testimonial-quote">
+                        The team's attention to detail and commitment to excellence is unmatched. They truly understand our needs and consistently deliver solutions that exceed our expectations.
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">
+                            <img src="image/zulqi.jpg" alt="Client">
+                        </div>
+                        <div class="testimonial-name">Zulqernain</div>
+                        <div class="testimonial-position">Director, GlobalVentures</div>
+                    </div>
+                </div>
+                <div class="testimonial-item">
+                    <div class="testimonial-quote">
+                        From the first consultation to ongoing support, this company has proven to be a valuable partner. Their expertise and personalized approach have made all the difference.
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">
+                            <img src="image/saif.jpg" alt="Client">
+                        </div>
+                        <div class="testimonial-name">Saifullah</div>
+                        <div class="testimonial-position">CTO, InnovateX</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Partners Section -->
+        <section class="about-section animate-slide-up">
+            <h2>Our Partners</h2>
+            <div class="partners-logos">
+                <img src="image/logo-transparent.png" alt="Partner 1" class="partner-logo">
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="about-section animate-slide-up">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">What services do you offer?</div>
+                    <div class="faq-answer">
+                        <p>We offer a comprehensive range of services including product development, consulting, digital transformation, and managed solutions. Our team works closely with clients to identify the best approach for their specific needs.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">What industries do you serve?</div>
+                    <div class="faq-answer">
+                        <p>We work across multiple industries including healthcare, finance, retail, education, and manufacturing. Our diverse expertise allows us to bring cross-industry insights and innovative approaches to each client engagement.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">How do you approach new projects?</div>
+                    <div class="faq-answer">
+                        <p>We follow a collaborative and transparent approach for all projects. This begins with a comprehensive discovery phase where we understand your goals, challenges, and requirements. We then create a tailored strategy and implementation plan, with regular checkpoints for feedback and refinement.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">What makes your company different?</div>
+                    <div class="faq-answer">
+                        <p>Our combination of technical expertise, industry knowledge, and client-focused approach sets us apart. We prioritize building long-term relationships rather than one-off transactions, and our solutions are designed with scalability and future growth in mind.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">Do you offer support after project completion?</div>
+                    <div class="faq-answer">
+                        <p>Absolutely! We provide comprehensive post-project support and maintenance services. Our dedicated support team ensures that your solutions continue to operate optimally and can be quickly adapted to changing needs or requirements.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="about-section animate-slide-up">
+            <h2>Get In Touch</h2>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h3>Our Location</h3>
+                            <p>123 Innovation Street, Tech City, TC 12345</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h3>Phone Number</h3>
+                            <p>+1 (555) 123-4567</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h3>Email Address</h3>
+                            <p>info@yourcompany.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <h3>Working Hours</h3>
+                            <p>Monday - Friday: 9AM - 6PM</p>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form action="#" method="POST">
+                        <div class="form-group">
+                            <label for="name">Your Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" name="subject" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Your Message</label>
+                            <textarea id="message" name="message" required></textarea>
+                        </div>
+                        <button type="submit" class="form-submit">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta-section animate-fade-in">
+            <h2>Ready to Transform Your Business?</h2>
+            <p>Join our growing network of satisfied clients and discover how our innovative solutions can help you achieve your goals.</p>
+            <div class="cta-buttons">
+                <a href="#" class="cta-button cta-primary">Get Started</a>
+                <a href="#" class="cta-button cta-secondary">Contact Sales</a>
+            </div>
+        </section>
+    </div>
+
+    <!-- JavaScript for interaction -->
+    <script>
+        // Dark mode toggle
+        const themeToggle = document.getElementById('theme-toggle');
+        
+        // Check for saved theme preference or respect OS preference
+        if (localStorage.getItem('dark-mode') === 'true' || 
+            (localStorage.getItem('dark-mode') === null && 
+             window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.body.classList.add('dark-mode');
+            themeToggle.checked = true;
+        }
+        
+        // Toggle theme when switch is clicked
+        themeToggle.addEventListener('change', function() {
+            if (this.checked) {
+                document.body.classList.add('dark-mode');
+                localStorage.setItem('dark-mode', 'true');
+            } else {
+                document.body.classList.remove('dark-mode');
+                localStorage.setItem('dark-mode', 'false');
+            }
+        });
+        
+        // FAQ toggle functionality
+        const faqItems = document.querySelectorAll('.faq-item');
+        
+        faqItems.forEach(item => {
+            const question = item.querySelector('.faq-question');
+            
+            question.addEventListener('click', () => {
+                // Close all other items
+                faqItems.forEach(otherItem => {
+                    if (otherItem !== item && otherItem.classList.contains('active')) {
+                        otherItem.classList.remove('active');
+                    }
+                });
+                
+                // Toggle current item
+                item.classList.toggle('active');
+            });
+        });
+        
+        // Animation on scroll
+        function animateOnScroll() {
+            const elements = document.querySelectorAll('.animate-fade-in, .animate-slide-up, .animate-slide-right, .animate-slide-left, .animate-zoom-in');
+            
+            elements.forEach(element => {
+                const elementPosition = element.getBoundingClientRect().top;
+                const windowHeight = window.innerHeight;
+                
+                if (elementPosition < windowHeight - 100) {
+                    element.style.animationDelay = '0.2s';
+                    element.style.animationPlayState = 'running';
+                }
+            });
+        }
+        
+        // Run on page load
+        document.addEventListener('DOMContentLoaded', animateOnScroll);
+        
+        // Run on scroll
+        window.addEventListener('scroll', animateOnScroll);
+        
+        // Simple testimonial slider (for a more robust solution, consider using a library)
+        let currentSlide = 0;
+        const testimonials = document.querySelectorAll('.testimonial-item');
+        
+        function showTestimonial(index) {
+            testimonials.forEach((testimonial, i) => {
+                if (i === index) {
+                    testimonial.style.display = 'block';
+                } else {
+                    testimonial.style.display = 'none';
+                }
+            });
+        }
+        
+        function nextTestimonial() {
+            currentSlide = (currentSlide + 1) % testimonials.length;
+            showTestimonial(currentSlide);
+        }
+        
+        // Initialize testimonials
+        if (testimonials.length > 0) {
+            showTestimonial(0);
+            // Auto rotate testimonials every 5 seconds
+            setInterval(nextTestimonial, 5000);
+        }
+    </script>
+</body>
+</html>

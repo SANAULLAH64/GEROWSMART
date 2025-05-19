@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Grow Smart - Login</title>
+  <link rel="stylesheet" href="css/loginpage.css" />
+  <script src="js/loginpage.js"></script>
+</head>
+<body>
+  <div class="container">
+    <!-- Left Side -->
+    <div class="left-side">
+      <div class="text-content">
+        
+        <h1>Welcome to<span>  GrowSmart</span></h1>
+        <p>"Welcome to GrowSmart – Securely log in to manage your crops, explore fertilizers, and get expert farming advice at your fingertips."   </p>
+      </div>
+      <div class="scroll-container">
+        <div class="scroll-images">
+          <img src="image/a.jpg" alt="Service 1" />
+          <img src="image/b.jpg" alt="Service 2" />
+          <img src="image/c.jpg" alt="Service 3" />
+          <!-- Duplicate images for seamless looping -->
+          <img src="image/a.jpg" alt="Service 1" />
+          <img src="image/b.jpg" alt="Service 2" />
+          <img src="image/c.jpg" alt="Service 3" />
+        </div>
+      </div>
+    </div>
+
+    <!-- Right Side: Login Form -->
+    <div class="right-side">
+      <div class="login-box">
+        <h2>Login to GrowSmart</h2>
+        <form action="login.php" method="POST">
+          <input type="text" name="email" placeholder="Email or Phone" required />
+          <input type="password" name="password" placeholder="Password" required />
+          <button type="submit">Log In</button>
+        </form>
+        <div class="divider">
+          <span>or</span>
+        </div>
+        <button class="signup-btn" onclick="window.location.href='CF.html'">Create New Account</button>
+      </div>
+    </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

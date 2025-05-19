@@ -1,0 +1,203 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  min-height: 100vh;
+  background: url('../image/irewolede-PvwdlXqo85k-unsplash.jpg') no-repeat center center fixed;
+  background-size: cover;
+}
+
+.container {
+  display: flex;
+  height: 100vh;
+  backdrop-filter: blur(1px); /* Optional: adds blur effect to background */
+}
+
+.left-side {
+  width: 65%;
+  color: rgb(246, 246, 246);
+  padding: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+}
+
+/* Rest of your existing CSS remains the same */
+
+.left-side h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.left-side h1  {
+  color:#43621a;
+}
+.left-side h1 span  {
+  color:#0f0f0e;
+}
+
+.left-side p {
+  font-size: 1.1rem;
+  color: #050505;
+  max-width: 600px;
+  margin-bottom: 30px;
+}
+
+.scroll-container {
+  height: 350px;
+  overflow: hidden;
+  border-radius: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  background-color: rgba(56, 54, 54, 0);
+  padding: 5px;
+  position: relative; /* Added for better positioning */
+}
+
+.scroll-images {
+  display: flex;
+  flex-direction: column;
+  animation: scroll 20s linear infinite;
+}
+
+.scroll-images img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  flex-shrink: 0; /* Prevent images from shrinking */
+}
+
+/* Remove margin from last image to prevent extra space */
+.scroll-images img:last-child {
+  margin-bottom: 0;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(calc(-100% + 350px)); /* Adjust based on container height */
+  }
+}
+.right-side {
+  width: 35%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-box {
+  
+  padding: 40px;
+  background-color: rgba(255, 255, 255, 0.266); 
+  backdrop-filter: blur(4px); /* Apply blur to the background behind */
+  border-radius: 15px;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 10px 30px #43621a;
+}
+
+.login-box h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #43621a;
+}
+
+.login-box form input {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+.login-box form button {
+  width: 100%;
+  padding: 12px;
+  background-color: #43621a;
+  color: #fcfafa;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 1rem;
+  margin-top: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.login-box form button:hover {
+  background-color: #b2cc77;
+}
+
+.login-box .forgot {
+  display: block;
+  text-align: center;
+  margin: 10px 0;
+  color: #43621a;
+  font-size: 0.9rem;
+  text-decoration: none;
+}
+
+.login-box hr {
+  margin: 20px 0;
+  border: none;
+  border-top: 1px solid #ddd;
+}
+
+.create-btn {
+  background-color: #43621a;
+}
+
+.create-btn:hover {
+  background-color: #b2cc77;
+}
+/* Add this to your existing CSS */
+.divider {
+  display: flex;
+  align-items: center;
+  margin: 20px 0;
+  color: #43621a;
+}
+
+.divider::before,
+.divider::after {
+  content: "";
+  flex: 1;
+  border-bottom: 1px solid #43621a;
+}
+
+.divider::before {
+  margin-right: 10px;
+}
+
+.divider::after {
+  margin-left: 10px;
+}
+
+.signup-btn {
+  width: 100%;
+  padding: 12px;
+  background-color: #ffffff;
+  color: #43621a;
+  border: 1px solid #43621a;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 1rem;
+  margin-top: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.signup-btn:hover {
+  background-color: #43621a;
+  color: #ffffff;
+}

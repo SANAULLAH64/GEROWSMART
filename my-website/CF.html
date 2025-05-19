@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Create Account</title>
+  <link rel="stylesheet" href="css/CF.css" />
+  <script src="js/createform.js"></script>
+  <title>Background Image</title>
+</head>
+
+<body>
+  <body style="margin: 0; padding: 0;">
+
+    <!-- Background Image Container -->
+    <div style="
+      background-image: url('image/Untitled design.png');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      width: 100vw;
+      height: 100vh;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: -1; /* Ensures content appears above it */
+    "></div>
+  
+   
+    </div>
+  
+  </body>
+  
+    <div class="card cart">
+      <label class="title">CREATE ACCOUNT</label>
+      <div class="steps">
+        <div class="step">
+          <form class="form" method="POST" action="create_account.php">
+            <div>
+              <span>NAME</span>
+              <input type="text" name="name" class="input_field" placeholder="Enter your name" required />
+            </div>
+
+            <div>
+              <span>FATHER NAME</span>
+              <input type="text" name="fatherName" class="input_field" placeholder="Enter father's name" required />
+            </div>
+
+            <div>
+              <span>CNIC</span>
+              <input type="text" name="CNIC" class="input_field" placeholder="Enter CNIC or ID" required />
+            </div>
+
+            <div>
+              <span>PhoneNo</span>
+              <input type="number" name="PhoneNo" class="input_field" placeholder="Enter PHONE No" required />
+            </div>
+
+            <div>
+              <span>PASSWORD</span>
+              <input type="password" name="password" class="input_field" placeholder="Enter password" required />
+            </div>
+
+            <div>
+              <span>EMAIL</span>
+              <input type="email" name="email" class="input_field" placeholder="Enter email" required />
+            </div>
+
+            <div>
+              <span>ADDRESS (IF LOCATION NOT FOUND)</span>
+              <input type="text" name="address" class="input_field" placeholder="Enter address" />
+            </div>
+
+            <div>
+              <span>LOCATION</span>
+              <input type="text" name="location" id="location" class="input_field" readonly required />
+              <button type="button" class="map-btn" onclick="getLocation()">Get My Location</button>
+            </div>
+
+            
+            <div>
+              <button type="submit" class="checkout-btn">Create Account</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+  function getLocation() {
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(success, error, {
+        enableHighAccuracy: true, // GPS-level precision
+        timeout: 10000,
+        maximumAge: 0
+      });
+    } else {
+      alert("Geolocation is not supported by this browser.");
+    }
+  }
+
+  function success(position) {
+    const lat = position.coords.latitude;
+    const lng = position.coords.longitude;
+
+    const url = `https://nominatim.openstreetmap.org/reverse?format=json&lat=${lat}&lon=${lng}&zoom=18&addressdetails=1`;
+
+    fetch(url)
+      .then(response => response.json())
+      .then(data => {
+        if (data && data.address) {
+          const addr = data.address;
+          const parts = [
+            addr.road,
+            addr.suburb,
+            addr.neighbourhood,
+            addr.city || addr.town || addr.village,
+            addr.state,
+            addr.country
+          ].filter(Boolean);
+
+          const fullAddress = parts.join(', ');
+          document.getElementById("location").value = fullAddress || "Location not found";
+        } else {
+          document.getElementById("location").value = "Unknown location";
+        }
+      })
+      .catch(err => {
+        console.error("Reverse geocoding error:", err);
+        document.getElementById("location").value = "Error fetching location";
+      });
+  }
+
+  function error(err) {
+    alert("Failed to get location: " + err.message);
+  }
+</script>
+
+</body>
+</html>
